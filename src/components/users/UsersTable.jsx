@@ -1,5 +1,4 @@
 // components/UserTable.js 
-import axios from 'axios';
 import { useUsers } from '../../hooks/useUsers';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
@@ -30,29 +29,6 @@ const estilos = {
     border: "none",
     color: "white"
   }
-}
-
-const deleteUserButton = (userid) => {
-  axios.delete(`http://localhost:3000/api/users/${userid}`)
-    .then((resp) => {
-      alert('usuario eliminado');
-      console.log(resp);
-    })
-    .catch((error) => {
-      alert('No se pudo eliminar el usuario');
-      console.log(error);
-    })
-}
-const verPostsButton = (userid) => {
-  axios.get(`http://localhost:3000/api/users/${userid}`)
-    .then((resp) => {
-      alert('posteos cargados');
-      console.log(resp);
-    })
-    .catch((error) => {
-      alert('No se pudieron cargar posteos del usuario');
-      console.log(error);
-    })
 }
 
 function UserTable() {

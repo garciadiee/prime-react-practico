@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 
-
-export const UserEnter = (props) => {
+export const UserEnter = () => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -44,8 +43,8 @@ export const UserEnter = (props) => {
       backgroundColor: "#7890a8",
       border: "none",
       color: "white",
-      margin: "4px"
-    }
+      margin: "1%",
+     }
   }
 
   return (

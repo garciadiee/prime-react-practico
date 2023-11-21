@@ -1,18 +1,16 @@
-//Vistas Usuarios
+//Usuarios
 import UsersTableView from "./pages/users/UsersTableView";
 import UsersEnterView from "./pages/users/UsersEnterView";
 
-//Vistas Posteos
+//Posteos
 import PostsTableView from "./pages/posts/PostsTableView";
 import PostsEnterView from "./pages/posts/PostsEnterView";
 
 //react
-import React, { useState } from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
-  BrowserRouter,
 } from "react-router-dom";
 
 //PrimeReact
@@ -21,6 +19,8 @@ import {
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import { Splitter, SplitterPanel } from "primereact/splitter";
+
+import { Button } from 'primereact/button';
 
 const estilos = {
   centrar: {
@@ -37,25 +37,34 @@ const estilos = {
     backgroundColor: "#7890a8",
     marginTop: "10px",
     padding: "20px",
-    height: "100px",
+    height: "10%",
   },
+  boton: {
+    backgroundColor: "#304878",
+    border: "none",
+    color: "white",
+    margin: "1%",
+   }
 };
 
 function App() {
   return (
     <>
       <div style={estilos.centrar}>
+        
         <Splitter style={estilos.tabla}>
           <SplitterPanel>
-            <a href="/users">Usuarios</a>
+            <a href="/users"><Button label="Usuarios" style={estilos.boton}/></a>
             <br />
-            <a href="/posts">Publicaciones</a>
+            <a href="/posts"><Button label="Posts" style={estilos.boton}/></a>
             <br />
           </SplitterPanel>
           <SplitterPanel>
-            <a href="/newuser">Crear Usuario</a>
+            
+        
+            <a href="/newuser"><Button label="Crear Usuario" style={estilos.boton} /></a> 
             <br />
-            <a href="/newpost">Crear Publicacion</a>
+            <a href="/newpost"><Button label="Crear Post" style={estilos.boton}/></a>
 
             <br />
           </SplitterPanel>

@@ -7,7 +7,7 @@ import { InputText } from 'primereact/inputtext';
 import { Link } from 'react-router-dom';
 
 
-export const PostEnter = (props) => {
+export const PostEnter = () => {
 
   const [descripcion, setDescripcion] = useState('');
   const [fecha, setFecha] = useState('');

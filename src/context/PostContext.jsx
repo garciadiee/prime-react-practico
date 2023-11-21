@@ -4,7 +4,6 @@ const PostContext = createContext();
 
 export default function PostContextProvider({children}) {
 
-
   const estilos = {
     centrar: {
       margin: "10px",
